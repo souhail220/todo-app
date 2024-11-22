@@ -1,132 +1,155 @@
-body, tr{
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --pink-saturated: #f1356d;
+}
+
+* {
+  font-family: "Quicksand";
+}
+
+body,
+tr {
+  margin: 0;
 }
 
 .table-container {
-    max-width: 786px;
-    margin: 5px auto;
-    padding: 5px 15px;
-    border: 1px solid #555555;
-    border-radius: 5px;
+  max-width: 1100px;
+  margin: 5px auto;
+  padding: 5px 15px;
 }
 
 /* General table styling */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 1em;
-    font-family: 'Arial', sans-serif;
-    min-width: 400px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1.2em;
+  font-family: "Arial", sans-serif;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Table header styling */
 thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
 }
 
-th, td {
-    padding: 12px 15px;
-    text-align: center;
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
 }
 
 /* Zebra striping */
 tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 tbody tr:nth-of-type(odd) {
-    background-color: #dfdfdf;
+  background-color: #dfdfdf;
 }
 
 /* Hover effect */
 tbody tr:hover {
-    background-color: #d1e7dd;
+  background-color: #d1e7dd;
 }
 
 /* Responsive table */
 @media screen and (max-width: 600px) {
-    table {
-        border: 0;
-    }
+  table {
+    border: 0;
+  }
 
-    table thead {
-        display: none;
-    }
+  table thead {
+    display: none;
+  }
 
-    table tbody tr {
-        display: block;
-        margin-bottom: 15px;
-    }
+  table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+  }
 
-    table tbody tr td {
-        display: block;
-        text-align: right;
-        font-size: 0.9em;
-        border-bottom: 1px solid #ddd;
-        position: relative;
-        padding-left: 50%;
-    }
+  table tbody tr td {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 50%;
+  }
 
-    table tbody tr td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-weight: bold;
-        text-align: left;
-    }
+  table tbody tr td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
 }
 
+.todo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #009879;
+}
 
 .btn {
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid #555555;
-    border-radius: 5px;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #555555;
+  border-radius: 5px;
 }
 
-.btn:hover{
-    background-color: #ccc;
-    color: #555;
-    cursor: pointer;
+.btn:hover {
+  background-color: #ccc;
+  color: #555;
+  cursor: pointer;
+}
+
+.btn-return {
+  color: white;
+  margin-bottom: 100px;
+  background-color: #555555;
 }
 
 .new-todo,
 .update-todo {
-    max-width: 786px;
-    margin: auto;
+  max-width: 786px;
+  margin: auto;
 }
 
 .form-group,
-.new-todo, .update-todo {
-    margin: 0.4em 0;
+.new-todo,
+.update-todo {
+  margin: 0.4em 0;
 }
 
 .form-group input[type="text"],
 .new-todo .form-group input[type="text"],
 .update-todo .form-group input[type="text"] {
-    width: 100%;
-    padding: 0.6em 1em;
-    margin: 0.5em 0;
-    border: 1px solid #aaa;
-    font-family: "Barlow", "sans-serif";
-    font-size: 1em;
-    border-radius: 0.2em;
+  width: 100%;
+  padding: 0.6em 1em;
+  margin: 0.5em 0;
+  border: 1px solid #aaa;
+  font-family: "Barlow", "sans-serif";
+  font-size: 1em;
+  border-radius: 0.2em;
 }
 
 .confirm {
-    border: 1px solid #aaa;
-    width: 786px;
-    margin: 0 auto;
-    padding: 30px 0;
-    text-align: center;
-    border-radius: 10px;
+  border: 1px solid #aaa;
+  font-size: 1.3em;
+  width: 786px;
+  margin: 25px auto;
+  padding: 30px 0;
+  text-align: center;
+  border-radius: 10px;
 }
